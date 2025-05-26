@@ -48,7 +48,7 @@ const applyPreset = (preset, setAttributes) => {
             bottom: '0',
             transform: 'none'
         },
-        'custom': {} // ne modifie rien
+        'custom': {}
     };
 
     const values = presets[preset];
@@ -76,7 +76,10 @@ registerBlockType('bicreactive/bloc-overlay', {
             backgroundImage,
             backgroundVideo,
             width,
-            height
+            height,
+            flexDirection,
+            justifyContent,
+            alignItems
         } = attributes;
 
         const style = {
@@ -88,7 +91,11 @@ registerBlockType('bicreactive/bloc-overlay', {
             zIndex,
             transform,
             width,
-            height
+            height,
+            display: 'flex',
+            flexDirection,
+            justifyContent,
+            alignItems
         };
 
         if (backgroundType === 'color') {
@@ -152,6 +159,42 @@ registerBlockType('bicreactive/bloc-overlay', {
                             value={height}
                             onChange={(value) => setAttributes({ height: value })}
                             help="ex: auto, 100vh, 500px"
+                        />
+                    </PanelBody>
+
+                    <PanelBody title={__('Disposition')} initialOpen={false}>
+                        <SelectControl
+                            label={__('Direction')}
+                            value={flexDirection}
+                            options={[
+                                { label: 'Ligne', value: 'row' },
+                                { label: 'Colonne', value: 'column' }
+                            ]}
+                            onChange={(value) => setAttributes({ flexDirection: value })}
+                        />
+                        <SelectControl
+                            label={__('Justification (axe principal)')}
+                            value={justifyContent}
+                            options={[
+                                { label: 'Début', value: 'flex-start' },
+                                { label: 'Centre', value: 'center' },
+                                { label: 'Fin', value: 'flex-end' },
+                                { label: 'Espacement égal', value: 'space-between' },
+                                { label: 'Espacement autour', value: 'space-around' },
+                                { label: 'Espacement uniforme', value: 'space-evenly' }
+                            ]}
+                            onChange={(value) => setAttributes({ justifyContent: value })}
+                        />
+                        <SelectControl
+                            label={__('Alignement (axe secondaire)')}
+                            value={alignItems}
+                            options={[
+                                { label: 'Début', value: 'flex-start' },
+                                { label: 'Centre', value: 'center' },
+                                { label: 'Fin', value: 'flex-end' },
+                                { label: 'Étirement', value: 'stretch' }
+                            ]}
+                            onChange={(value) => setAttributes({ alignItems: value })}
                         />
                     </PanelBody>
 
@@ -222,7 +265,10 @@ registerBlockType('bicreactive/bloc-overlay', {
             backgroundImage,
             backgroundVideo,
             width,
-            height
+            height,
+            flexDirection,
+            justifyContent,
+            alignItems
         } = attributes;
 
         const style = {
@@ -234,7 +280,11 @@ registerBlockType('bicreactive/bloc-overlay', {
             zIndex,
             transform,
             width,
-            height
+            height,
+            display: 'flex',
+            flexDirection,
+            justifyContent,
+            alignItems
         };
 
         if (backgroundType === 'color') {

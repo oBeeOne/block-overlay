@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Bloc Overlay
  * Description: Ajoute un bloc Gutenberg "Bloc Overlay" permettant de positionner un contenu superposé (overlay) via CSS.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Bicreactive
  * Text Domain: bloc-overlay
  */

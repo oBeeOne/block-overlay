@@ -42,6 +42,18 @@
         "type": "string",
         "default": "custom"
       },
+      "flexDirection": {
+        "type": "string",
+        "default": "row"
+      },
+      "justifyContent": {
+        "type": "string",
+        "default": "flex-start"
+      },
+      "alignItems": {
+        "type": "string",
+        "default": "stretch"
+      },
       "width": {   
         "type": "string",
         "default": "auto"
