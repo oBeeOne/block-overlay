@@ -1,0 +1,7 @@
+.bloc-overlay {
+    min-height: 100px;
+    border: 1px dashed #666;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    position: relative;
+}

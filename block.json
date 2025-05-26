@@ -1,0 +1,74 @@
+{
+    "apiVersion": 2,
+    "name": "bicreactive/bloc-overlay",
+    "title": "Bloc Overlay",
+    "category": "design",
+    "icon": "cover-image",
+    "description": "Un bloc superposable avec position personnalisée pour overlay sur une vidéo, une image ou tout autre contenu.",
+    "supports": {
+      "html": false,
+      "anchor": true
+    },
+    "attributes": {
+      "position": {
+        "type": "string",
+        "default": "absolute"
+      },
+      "top": {
+        "type": "string",
+        "default": "auto"
+      },
+      "right": {
+        "type": "string",
+        "default": "auto"
+      },
+      "bottom": {
+        "type": "string",
+        "default": "auto"
+      },
+      "left": {
+        "type": "string",
+        "default": "auto"
+      },
+      "zIndex": {
+        "type": "number",
+        "default": 1
+      },
+      "transform": {
+        "type": "string",
+        "default": "none"
+      },
+      "positionPreset": {
+        "type": "string",
+        "default": "custom"
+      },
+      "width": {   
+        "type": "string",
+        "default": "auto"
+      },
+      "height": {
+        "type": "string",
+        "default": "auto"
+      },
+      "backgroundType": {
+        "type": "string",
+        "default": "none"
+      },
+      "backgroundColor": {
+        "type": "string",
+        "default": ""
+      },
+      "backgroundImage": {
+        "type": "string",
+        "default": ""
+      },
+      "backgroundVideo": {
+        "type": "string",
+        "default": ""
+      }
+    },
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./editor.css",
+    "style": "file:./style.css"
+  }
+  

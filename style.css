@@ -1,0 +1,4 @@
+.bloc-overlay {
+    position: absolute; /* Valeur par défaut si rien n'est défini */
+    padding: 10px;
+}
