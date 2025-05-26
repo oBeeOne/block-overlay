@@ -13,3 +13,8 @@ function bloc_overlay_register_block() {
     register_block_type(__DIR__ . '/block');
 }
 add_action('init', 'bloc_overlay_register_block');
+
+if (is_admin()) {
+    require_once __DIR__ . '/github-updater.php';
+}
+
